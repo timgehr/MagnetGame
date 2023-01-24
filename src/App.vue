@@ -1,30 +1,63 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <div class="router-container">
+      <router-view />
+    </div>
   </div>
-  <router-view/>
 </template>
+
+<script>
+// Create a reference to the cities collection
+export default {
+  components: {
+    // navBar: NavBar,
+    // navSelect: NavSelect,
+  }
+}
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: whites;
+  background-image: url("./assets/fridgetop.jpg");
+  background-position: center top;
+  background-size:cover;
 }
 
-#nav {
-  padding: 30px;
+.router-container{
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* padding: 30px; */
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.magnet{
+  font-family: "Georgia", Times, serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  box-sizing: border-box;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1px;
+  box-shadow: 0px 1px 0px 1px rgba(3, 3, 3, 0.85);
+  background: rgba(255, 255, 255, 0.85);
+  color: black;
+  cursor: pointer;
+  user-select: none;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+*::-webkit-scrollbar{
+    display: none;
+  }
 </style>
